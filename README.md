@@ -1,0 +1,1 @@
+## A lovely collection of JavaScript exercises
