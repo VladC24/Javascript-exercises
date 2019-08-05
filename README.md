@@ -1,7 +1,10 @@
 ## A lovely collection of JavaScript exercises
 
 ### General Instructions
-* Clone the repo
+* Clone the repo:
+```
+$  git clone https://github.com/VladC24/Javascript-exercises.git
+```
 * Use a REPL to run the programs
 
 ### Programs instructions
@@ -11,5 +14,5 @@ Replace the value of the variable 'userQuestion' with a question of your choice.
 
 Example:
 ```
-let userQuestion = 'Am I going to get a holiday as a present for my Bday?';
+$  let userQuestion = 'Am I going to get a holiday as a present for my Bday?';
 ```
