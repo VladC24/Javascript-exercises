@@ -29,6 +29,7 @@ class Media {
   }
 }
 
+// Create class Book that inherits from class Media
 class Book extends Media {
   constructor(title, author, pages){
     super(title);
@@ -43,6 +44,7 @@ class Book extends Media {
   }
 }
 
+// Create class Movie that inherits from class Media
 class Movie extends Media {
   constructor(director, title, runTime){
     super(title);
@@ -54,6 +56,21 @@ class Movie extends Media {
   }
   get runTime(){
     return this._runTime;
+  }
+}
+
+// Create class CD that inherits from class Media
+class CD extends Media {
+  constructor(artist, title, songs){
+    super(title);
+    this._artist = artist;
+    this._songs = songs;
+  }
+  get artist(){
+    return this._artist;
+  }
+  get songs(){
+    return this._songs;
   }
 }
 
@@ -74,3 +91,12 @@ transformers.addRating(1);
 transformers.addRating(3);
 transformers.addRating(2);
 console.log(transformers.getAverageRating());
+
+// Results based on users ratings for a CD - get the average rating for the CD
+const summerPartyHits = new CD('Above&Beyond', 'Summer Party Hits', ['Sun&Moon', 'You got to go', 'Alone tonight'])
+summerPartyHits.toggleCheckOutStatus();
+console.log(summerPartyHits.isCheckedOut);
+summerPartyHits.addRating(5);
+summerPartyHits.addRating(5);
+summerPartyHits.addRating(5);
+console.log(summerPartyHits.getAverageRating());
