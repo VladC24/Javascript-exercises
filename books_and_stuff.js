@@ -57,11 +57,12 @@ class Movie extends Media {
   }
 }
 
+// Results based on users ratings for one book - get the average rating for the book
+const readyPlayerOne = new Book('Ernest Cline', 'Ready Player One', 356);
+readyPlayerOne.toggleCheckOutStatus();
+console.log(readyPlayerOne.isCheckedOut);
+readyPlayerOne.addRating(5);
+readyPlayerOne.addRating(4.5);
+readyPlayerOne.addRating(4);
+console.log(readyPlayerOne.getAverageRating());
 
-const historyOfEverything = new Book('Ernest Cline', 'Ready Player One', 356);
-historyOfEverything.toggleCheckOutStatus();
-console.log(historyOfEverything.isCheckedOut);
-historyOfEverything.addRating(5);
-historyOfEverything.addRating(4.5);
-historyOfEverything.addRating(4);
-console.log(historyOfEverything.getAverageRating());
