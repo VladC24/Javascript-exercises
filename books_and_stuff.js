@@ -66,3 +66,11 @@ readyPlayerOne.addRating(4.5);
 readyPlayerOne.addRating(4);
 console.log(readyPlayerOne.getAverageRating());
 
+// Results based on users ratings for one movie - get the average rating for the movie
+const transformers = new Movie('Michael Bay', 'Transformers', 144);
+transformers.toggleCheckOutStatus();
+console.log(transformers.isCheckedOut);
+transformers.addRating(1);
+transformers.addRating(3);
+transformers.addRating(2);
+console.log(transformers.getAverageRating());
