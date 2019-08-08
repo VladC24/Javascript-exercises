@@ -56,3 +56,12 @@ class Movie extends Media {
     return this._runTime;
   }
 }
+
+
+const historyOfEverything = new Book('Ernest Cline', 'Ready Player One', 356);
+historyOfEverything.toggleCheckOutStatus();
+console.log(historyOfEverything.isCheckedOut);
+historyOfEverything.addRating(5);
+historyOfEverything.addRating(4.5);
+historyOfEverything.addRating(4);
+console.log(historyOfEverything.getAverageRating());
