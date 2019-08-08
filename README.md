@@ -1,15 +1,15 @@
-## A lovely collection of JavaScript exercises
+# A lovely collection of JavaScript exercises
 
-### General Instructions
+## General Instructions
 * Clone the repo:
 ```
 $  git clone https://github.com/VladC24/Javascript-exercises.git
 ```
 * Use a REPL to run the programs
 
-### Programs instructions
+## Programs instructions
 
-#### 1. Eight Ball
+### 1. Eight Ball
 Replace the value of the variable 'userQuestion' with a question of your choice.
 
 __Example:__
