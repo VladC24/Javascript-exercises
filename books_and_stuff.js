@@ -1,10 +1,12 @@
+// Create a parent class - Media, that will have a few child classes
 class Media {
   constructor(title) {
     this._title = title;
     this._isCheckedOut = false;
     this._ratings = [];
-  }
-  
+  } 
+  // Above, the 'title' property will be in all the child classes
+  // Create getter methods for the properties within the class
   get title(){
     return this._title;
   }
@@ -14,6 +16,7 @@ class Media {
   get ratings(){
     return this._ratings;
   }
+  // Create a method that changes the value saved to _isCheckedOut property. If the value is true, change it to false, and vice versa.
   toggleCheckOutStatus(){
     this.isCheckedOut = !this.isCheckedOut;
   }
@@ -24,18 +27,22 @@ class Media {
     let ratingsSum = this.ratings.reduce((accumulator, rating) => accumulator + rating);
     return ratingsSum / this.ratings.length; 
   }
+  // Create a method that add ratings from users
   addRating(value){
     this.ratings.push(value);
   }
 }
 
-// Create class Book that inherits from class Media
+/* Create child classes that inherit from class Media the properties and getters. 
+We will only create the specific getters for the child classes' properties */
+
 class Book extends Media {
   constructor(title, author, pages){
-    super(title);
+    super(title); 
     this._author = author;
     this._pages = pages;
   }
+  //  Above, the 'super(title)' is passed any arguments that the parent constructor uses
   get author(){
     return this._author;
   }
@@ -44,7 +51,6 @@ class Book extends Media {
   }
 }
 
-// Create class Movie that inherits from class Media
 class Movie extends Media {
   constructor(director, title, runTime){
     super(title);
@@ -59,7 +65,6 @@ class Movie extends Media {
   }
 }
 
-// Create class CD that inherits from class Media
 class CD extends Media {
   constructor(artist, title, songs){
     super(title);
